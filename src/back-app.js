@@ -23,6 +23,17 @@ app.get('', (req,res) => {
     })
 })
 
+app.get('/plant', (req, res) => {
+    res.render('plant', {
+        title: 'Tree Nation'
+    })
+})
+
+app.get('/partials', (req, res) => {
+    res.render('partials', {
+        title: 'Paperform Partials'
+    })
+})
 
 app.listen(port, () => {
     console.log('Server is up at port: ' + port)

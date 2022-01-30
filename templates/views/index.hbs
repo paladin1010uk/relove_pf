@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+
+    <head>
+
+        <link rel="stylesheet" href="../../public/css/relove-style.css">
+    </head>
+
+    <body>
+        <div class="text-content">
+         
+            <div data-paperform-id="relove-trial" data-takeover="1" data-onsubmit="TrialOrder"></div>
+ 
+            <script>
+                function TrialOrder(e) {
+                dataLayer = [{
+                'transactionTotal': e.total,
+                'transactionCurrency': "GBP",
+                'transactionID': e.submission_id,
+                'transactionPromoCode': "",
+                'event': "awin.dl.ready"
+                }];
+                console.log(dataLayer);
+                }
+            </script>
+
+
+            <p id="p1"></p>
+
+        </div>
+
+        <script src='/js/front-app.js'></script>
+        <script src="https://paperform.co/__embed.min.js"></script>
+        <script src="https://www.dwin1.com/25566.js" type="text/javascript" defer="defer"></script>
+    </body>
+</html>
